@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summer Sale Landing Page</title>  
-<link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <title>Summer Sale Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="bg-[#F9F6E2] h-[700px] w-auto flex justify-evenly">
         <div class="text-center mt-64">
             <h2 class="text-lg font-semibold">---SALE FEVER---</h2>
-            <h1 class="text-3xl font-bold w-80 mt-10">Purchase TK 200 or above & get <span class="text-[#E527B2] mt-20">20% off</span></h1>
+            <h1 class="text-3xl font-bold w-80 mt-10">Purchase TK 200 or above & get <span
+                    class="text-[#E527B2] mt-20">20% off</span></h1>
             <div class="flex text-center mt-16 justify-evenly ">
                 <p class="font-medium mt-1">Use Promo Code</p>
                 <button class="btn btn-secondary btn-sm text-white ">SELL200</button>
@@ -20,9 +23,41 @@
         <img class="w-[500px] h-[500px] mt-20 " src="images/Summer 1.png" alt="">
 
     </header>
-    <main>
+    <main class="bg-[#F8F8F8]">
+        <div class="flex flex-col lg:flex-row">
+            <!-- card container -->
+            <div></div>
+            <div>
+                <!-- Have coupon -->
+                <div class="h-28 w-72 bg-white text-center">
+                    <p class="text-left pl-3 pt-4">Have coupon?</p>
+                    <div>
+                        <input class="h-10 border-2 border-solid border-black" placeholder="Coupon Code" type="text">
+                        <button class="h-10 btn btn-success text-white bg-[#E527B2]">Apply</button>
+                    </div>
+                </div>
+                <div class="h-60 w-72 bg-white mt-3 text-center">
+                    <div id="product-entry" >
+                    </div>
+                    <br>
+                    <hr class="w-64 ml-4" >
+                    <br>
+                    <div class="text-left pl-3">
+                        <p>Total price:</p>
+                        <p>Discount:</p>
+                        <p>Total:</p>
+                    </div>
+                    <br>
+                    <hr class="w-64 ml-4" >
+                    <button class="h-10 btn btn-success text-white bg-[#E527B2] relative top-32">Make Purchase</button>
+                    
+
+                </div>
+            </div>
+        </div>
 
     </main>
-    
+
 </body>
+
 </html>
