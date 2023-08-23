@@ -24,6 +24,48 @@ function addToCart3() {
     addToCart('K. Accessories 3', price);
     addPrice(price);
 }
+function addToCart4() {
+    const price = getPrice("price4");
+    // console.log(price);
+
+    addToCart('Sports Black Cap', price);
+    addPrice(price);
+}
+function addToCart5() {
+    const price = getPrice("price5");
+    // console.log(price);
+
+    addToCart('Full Jersey Set', price);
+    addPrice(price);
+}
+function addToCart6() {
+    const price = getPrice("price6");
+    // console.log(price);
+
+    addToCart('Sports cates', price);
+    addPrice(price);
+}
+function addToCart7() {
+    const price = getPrice("price7");
+    // console.log(price);
+
+    addToCart('Single Relax Chair', price);
+    addPrice(price);
+}
+function addToCart8() {
+    const price = getPrice("price8");
+    // console.log(price);
+
+    addToCart('Children play', price);
+    addPrice(price);
+}
+function addToCart9() {
+    const price = getPrice("price9");
+    // console.log(price);
+
+    addToCart('Flexible Sofa', price);
+    addPrice(price);
+}
 
 
 
@@ -91,7 +133,7 @@ function getDiscount() {
 function calculateTotal() {
     const total = totalPrice - discountAmount;
     const totalElement = document.getElementById("total");
-    totalElement.innerText = `${total.toFixed(2)} tk`;
+    totalElement.innerText = `${total.toFixed(2)}`;
 }
 
 
