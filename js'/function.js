@@ -1,5 +1,6 @@
 // let function ar vitor dile loop ar moto code ghurte thake..
 let totalPrice = 0;
+let discountAmount = 0;
 
 function addToCart1() {
     const price = getPrice("price1");
@@ -31,8 +32,8 @@ function addToCart3() {
 function addPrice(everyPrice) {
     totalPrice += everyPrice;
     const totalElement = document.getElementById('total-price');
-    totalElement.innerHTML = `${totalPrice.toFixed(2)}`
-    return (totalPrice);
+    totalElement.innerHTML = `${totalPrice.toFixed(2)}`;
+    calculateTotal();
 }
 // active Purchase btn 
 function openModal() {
@@ -59,7 +60,7 @@ function addToCart(productName, price) {
     const count = productEntry.childElementCount;
 
     const p = document.createElement('p');
-    p.innerHTML = `${count + 1}. ${productName}`
+    p.innerHTML = `${count + 1}. ${productName}`;
 
     productEntry.appendChild(p);
 }
@@ -70,5 +71,27 @@ function addPromo() {
     const coupon = 'SELL200';
     const couponField = document.getElementById('coupon');
     couponField.value = coupon;
-    
+
 }
+
+// get discount & active coupon
+function getDiscount() {
+    const couponField = document.getElementById('coupon');
+    const couponValue = couponField.value;
+    if (totalPrice > 200 && couponValue === 'SELL200') {
+        discountAmount = totalPrice * 0.2;
+    } else {
+        discountAmount = 0;
+    }
+    const discountElement = document.getElementById('discount');
+    discountElement.innerHTML = `${discountAmount.toFixed(2)}`;
+    calculateTotal();
+}
+
+function calculateTotal() {
+    const total = totalPrice - discountAmount;
+    const totalElement = document.getElementById("total");
+    totalElement.innerText = `${total.toFixed(2)} tk`;
+}
+
+

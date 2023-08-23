@@ -222,7 +222,7 @@
                     <p class="text-left pl-3 pt-4">Have coupon?</p>
                     <div>
                         <input id="coupon" class="h-10 border-2 border-solid border-black" placeholder="Coupon Code" type="text">
-                        <button class="h-10 btn btn-success text-white bg-[#E527B2]">Apply</button>
+                        <button onclick="getDiscount()" class="h-10 btn btn-success text-white bg-[#E527B2]">Apply</button>
                     </div>
                 </div>
                 <div class="h-auto w-72 bg-white mt-3 text-center">
@@ -234,8 +234,8 @@
                     <br>
                     <div class="text-left pl-3 font-semibold">
                         <p>Total price: <span id="total-price" class="font-mono">0</span> tk</p>
-                        <p>Discount: <span class="font-mono">0</span> tk</p>
-                        <p>Total: <span class="font-mono">0</span> tk</p>
+                        <p>Discount: <span id="discount" class="font-mono">0</span> tk</p>
+                        <p>Total: <span id="total" class="font-mono">0</span> tk</p>
                     </div>
                     <br>
                     <hr class="w-64 ml-4">
